@@ -1,0 +1,22 @@
+logging:
+  config: classpath:logback-test.xml
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://192.168.1.127:3306/wx?allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2b8
+        username: root
+        password: cheyou
+        hikari:
+          maximum-pool-size: 5
+          minimum-idle: 1
+
+    rabbitmq:
+          host: 192.168.1.127
+          port: 5672
+          username: test
+          password: 123
+          virtual-host: /
+
+mq:
+  smartbus:
+    enable: true

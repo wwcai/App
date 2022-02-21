@@ -1,0 +1,29 @@
+#logging:
+#  config: classpath:logback-dev.xml
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://110.42.203.72:3306/wx?allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2b8
+        username: root
+        password: 123456
+        hikari:
+          maximum-pool-size: 5
+          minimum-idle: 1
+
+    rabbitmq:
+            host: 110.42.203.72
+            port: 5672
+            username: test
+            password: 123
+            virtual-host: /
+    redis:
+        host: 110.42.203.72
+        port: 6379
+        database: 12
+        timeout: 10000
+        lettuce:
+          pool:
+            max-active: 4
+            max-wait: -1
+            max-idle: 2
+            min-idle: 0
