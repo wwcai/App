@@ -1,0 +1,14 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cool.cxc.app.user.mapper.UserBindMapper">
+
+    <select id="queryUserBindByTypeAndOpenId" resultType="UserBindModel" useCache="true">
+        select * from user_bind where type = #{provider} and openid = #{openid};
+    </select>
+
+    <insert id="addUserBind" parameterType="UserBindModel" useGeneratedKeys="true" keyProperty="id">
+        insert into user_bind (type, openid, nickname, avatarurl) values(#{type}, #{openid}, #{nickname}, #{avatarurl});
+    </insert>
+
+</mapper>

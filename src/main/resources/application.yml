@@ -22,6 +22,15 @@ spring:
 #     mvc:
 #         static-path-pattern: /**
 
+mybatis:
+    typeAliasesPackage: cool.cxc.app.*.model
+    mapperLocations: classpath:mybatis/mapper/*.xml
 
+tencent:
+    SecretId: AKIDEG2Xlna6KIyOXQ2NQCixvb1A2cwzlGTQ
+    SecretKey: h7G8k47tOcZFemdCVXTHrBF4kAKEsITQ
+    SDKAppID: 1400639127
+    TemplateId: 1317611
+    SignName: 单色不单调de
 
 
